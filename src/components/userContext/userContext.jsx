@@ -14,7 +14,7 @@ export const UserContextProvider = ({children}) => {
                 const token = localStorage.getItem("token");
                 const { id } = JSON.parse(atob(token.split('.')[1])); 
                 
-                const response = await axios.get(`http://localhost:3000/api/getUserData/${id}`, { 
+                const response = await axios.get(`https://blogserver-6h8s.onrender.com/api/getUserData/${id}`, { 
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

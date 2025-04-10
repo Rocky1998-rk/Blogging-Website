@@ -55,11 +55,11 @@ const handleImageChange = (e) => {
 
      
     //   if (editBlogData) {
-    //      const response =  await axios.put(`http://localhost:3000/api/blogEdit/${editBlogData._id}`, finalBlogData)
+    //      const response =  await axios.put(`https://blogserver-6h8s.onrender.com/api/blogEdit/${editBlogData._id}`, finalBlogData)
     //       toast.success("Edit Blog Successfully")
     //   } else {
         
-    //    const response  = await axios.post(`http://localhost:3000/api/blogData/${user._id}`, finalBlogData);
+    //    const response  = await axios.post(`https://blogserver-6h8s.onrender.com/api/blogData/${user._id}`, finalBlogData);
     //    blogId = response.data.blog._id;
     //    toast.success("Created Blog Successfully")
         
@@ -70,7 +70,7 @@ const handleImageChange = (e) => {
     //     const formData = new FormData();
     //     formData.append('file', blogData.blogImagePath);
 
-    //     const response = await axios.post(`http://localhost:3000/api/uploadBlogImage/${blogId}`, formData)
+    //     const response = await axios.post(`https://blogserver-6h8s.onrender.com/api/uploadBlogImage/${blogId}`, formData)
     //     imageUrl = response.data.blogImagePath; 
     //     toast.success("UploadBlog Image Successfully")
     //     console.log("UploadedBlogData", imageUrl)
@@ -113,7 +113,7 @@ const handleImageChange = (e) => {
       // **Edit Blog**
       if (editBlogData) {
         try {
-          await axios.put(`http://localhost:3000/api/blogEdit/${editBlogData._id}`, finalBlogData);
+          await axios.put(`https://blogserver-6h8s.onrender.com/api/blogEdit/${editBlogData._id}`, finalBlogData);
           toast.success("Edit Blog Successfully");
         } catch (error) {
           toast.error("Edit Blog not Saved");
@@ -126,7 +126,7 @@ const handleImageChange = (e) => {
       // **Create New Blog**
       else {
         try {
-          const response = await axios.post(`http://localhost:3000/api/blogData/${user._id}`, finalBlogData);
+          const response = await axios.post(`https://blogserver-6h8s.onrender.com/api/blogData/${user._id}`, finalBlogData);
           blogId = response.data.blog._id;
           toast.success("Created Blog Successfully");
         } catch (error) {
@@ -143,7 +143,7 @@ const handleImageChange = (e) => {
           const formData = new FormData();
           formData.append("file", blogData.blogImagePath);
     
-          const response = await axios.post(`http://localhost:3000/api/uploadBlogImage/${blogId}`, formData);
+          const response = await axios.post(`https://blogserver-6h8s.onrender.com/api/uploadBlogImage/${blogId}`, formData);
           console.log("res", response.data)
           imageUrl = response.data;
           toast.success("Upload Blog Image Successfully");
@@ -238,14 +238,6 @@ export default createBlog
 
 
 
-
-
-
-
-
-
-
-
 // import React, { useContext, useState, useEffect } from 'react';
 // import { userContext } from '../userContext/userContext';
 // import { Link } from 'react-router-dom';
@@ -301,11 +293,11 @@ export default createBlog
 //       };
 
 //       if (editBlogData) {
-//         const response = await axios.put(`http://localhost:3000/api/blogEdit/${editBlogData._id}`, finalBlogData);
+//         const response = await axios.put(`https://blogserver-6h8s.onrender.com/api/blogEdit/${editBlogData._id}`, finalBlogData);
 //         blogId = response.data;
 //         toast.success("Blog Edited Successfully");
 //       } else {
-//         const response = await axios.post(`http://localhost:3000/api/blogData/${user._id}`, finalBlogData);
+//         const response = await axios.post(`https://blogserver-6h8s.onrender.com/api/blogData/${user._id}`, finalBlogData);
 //         blogId = response.data;
 //         toast.success("Blog Created Successfully");
 //       }
@@ -313,7 +305,7 @@ export default createBlog
 //       if (blogData.blogImagePath && typeof blogData.blogImagePath !== "string") {
 //         const formData = new FormData();
 //         formData.append('file', blogData.blogImagePath);
-//         const response = await axios.post(`http://localhost:3000/api/uploadBlogImage/${blogId}`, formData);
+//         const response = await axios.post(`https://blogserver-6h8s.onrender.com/api/uploadBlogImage/${blogId}`, formData);
 //         imageUrl = response.data.blogImagePath;
 //       }
 

@@ -12,7 +12,7 @@ const otp = () => {
 
     try {
 
-       const response = await axios.post('http://localhost:3000/api/verifyOtp', {email:userEmail, otp})
+       const response = await axios.post('https://blogserver-6h8s.onrender.com/api/verifyOtp', {email:userEmail, otp})
        console.log(response.data)
 
       if (response.data) {

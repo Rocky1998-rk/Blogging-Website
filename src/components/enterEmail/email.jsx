@@ -16,7 +16,7 @@ const email = () => {
 
         try {
 
-            const response = await axios.post('http://localhost:3000/api/otpSend', {email:userEmail});
+            const response = await axios.post('https://blogserver-6h8s.onrender.com/api/otpSend', {email:userEmail});
             console.log(response.data)
 
             if (response.data) {

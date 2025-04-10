@@ -36,7 +36,7 @@ const signup = () => {
   
 
   try {
-      await axios.post("http://localhost:3000/api/signup", formData)
+      await axios.post("https://blogserver-6h8s.onrender.com/api/signup", formData)
       toast.success("SignUp Successfully")
       console.log(formData)
       navigate("/mailNotVerified")

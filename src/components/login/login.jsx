@@ -20,7 +20,7 @@ const login = () => {
    const onSubmit = async (data) => {
      console.log(data)
     try {
-     const response =  await axios.post("http://localhost:3000/api/login", data)
+     const response =  await axios.post("https://blogserver-6h8s.onrender.com/api/login", data)
 
      const token = response.headers.authorization.split("Bearer ")[1]
      console.log(token)

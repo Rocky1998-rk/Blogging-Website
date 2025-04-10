@@ -17,7 +17,7 @@ const blogDetails = ({ selectShowBlog }) => {
     const handleSubmitComment =  async (e) => {
       e.preventDefault();
          try {
-         const res = await axios.post(`http://localhost:3000/api/addComment/${userId}/${blogId}`, {comment})
+         const res = await axios.post(`https://blogserver-6h8s.onrender.com/api/addComment/${userId}/${blogId}`, {comment})
          console.log(res.data)
          toast.success("Comment send Successfully")
          setComment("")

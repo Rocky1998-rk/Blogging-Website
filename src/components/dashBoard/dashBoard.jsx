@@ -69,7 +69,7 @@ console.log("dashBoard:", user)
         const { id } = JSON.parse(atob(token.split('.')[1]));
 
         try {
-          const response = await axios.post(`http://localhost:3000/api/uploadProfile/${id}`, formData);
+          const response = await axios.post(`https://blogserver-6h8s.onrender.com/api/uploadProfile/${id}`, formData);
           console.log("UploadedData", response.data)
           toast.success("Profile Upload Successfully")
           
@@ -88,7 +88,7 @@ console.log("dashBoard:", user)
   
     try {
 
-       await axios.delete(`http://localhost:3000/api/deleteBlog/${blogId}`);
+       await axios.delete(`https://blogserver-6h8s.onrender.com/api/deleteBlog/${blogId}`);
       toast.success("Blog deleted successfully");
   
       // const updatedBlogs = client.createBlogs.filter((blog) => blog._id !== blogId);

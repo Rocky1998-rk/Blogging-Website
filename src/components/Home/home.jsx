@@ -32,7 +32,7 @@ const home = () => {
 
 
 //   try {
-//     const res = await axios.get(`http://localhost:3000/api/getComment/${blog._id}`, );
+//     const res = await axios.get(`https://blogserver-6h8s.onrender.com/api/getComment/${blog._id}`, );
 //     console.log("data", res.data)
 //     setShowComments(res.data.comments);  
 //   } catch (error) {
@@ -44,7 +44,7 @@ const home = () => {
   useEffect(() => {
     const usersData = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/allUserData",)
+        const res = await axios.get("https://blogserver-6h8s.onrender.com/api/allUserData",)
         if (res?.data?.allUsers?.length > 0) {
               setAllUsers(res?.data?.allUsers)
         } else {
@@ -69,7 +69,7 @@ const home = () => {
         allUsers.flatMap((user) =>
           user.createBlogs.map(async (blog) => {
             try {
-              const commentsResponse = await axios.get(`http://localhost:3000/api/getComment/${blog._id}`);
+              const commentsResponse = await axios.get(`https://blogserver-6h8s.onrender.com/api/getComment/${blog._id}`);
               counts[blog._id] = commentsResponse.data.comments.length || 0;
             } catch {
               counts[blog._id] = 0;
@@ -94,7 +94,7 @@ const home = () => {
   const handleSubmitComment =  async (e) => {
     e.preventDefault();
        try {
-       const res = await axios.post(`http://localhost:3000/api/addComment/${userId}/${blogId}`, {comment})
+       const res = await axios.post(`https://blogserver-6h8s.onrender.com/api/addComment/${userId}/${blogId}`, {comment})
        console.log(res.data)
        toast.success("Comment send Successfully")
        setComment("")
@@ -131,7 +131,7 @@ const handleShowSelectBlog = async (blog) => {
 
   try {
 
-    const res = await axios.get(`http://localhost:3000/api/getComment/${blog._id}`,);
+    const res = await axios.get(`https://blogserver-6h8s.onrender.com/api/getComment/${blog._id}`,);
     console.log("getComment", res.data)
     setShowComments(res.data.comments); 
 
