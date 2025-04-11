@@ -5,7 +5,7 @@ import { FaEyeSlash } from "react-icons/fa6";
 import { useForm } from 'react-hook-form';
 import { FaEye } from "react-icons/fa6";
 import { MdOutlineLogin } from "react-icons/md";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import axios from 'axios';
 
@@ -85,13 +85,13 @@ const login = () => {
           <input type="checkbox" className='w-[20px] h-[20px] accent-black cursor-pointer'/>
           <p className='text-lg'>Remember me</p>
         </div>
-           <p className='mr-7'><a href='/email'>Forget Password?</a></p>
+           <p className='mr-7'><Link to={'/email'}>Forget Password?</Link></p>
         </div>
           
           <div className='flex flex-col items-center justify-center mt-7 gap-2'>
 
             <button type='submit' className='w-[300px] py-1.5  rounded-3xl bg-[brown] shadow-md shadow-[#2d2d2de1] text-white cursor-pointer'>Log In</button>
-            <p>Don't have an account? <span className='text-[green]'><a href='/'>Sign In</a></span></p>
+            <p>Don't have an account? <span className='text-[green]'><Link to ={'/'}>Sign In</Link></span></p>
           </div>
 
           </form>

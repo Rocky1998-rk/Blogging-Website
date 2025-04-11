@@ -129,8 +129,8 @@ const signup = () => {
              <p role="alert" className='w-[340px] h-[30px] text-[red]'>Category is required</p>
              )}
         
-              <Link to = {'/mailNotVerified'}><button type='submit' className='w-[270px] shadow-md shadow-[#181010de] py-1.5 rounded-3xl mt-6 cursor-pointer bg-[brown] text-[white]'>CREATE ACCOUNT</button></Link>
-              <Link to={'/login'}><p>Already have an account?<span><a href='' className='text-[#04049f] font-semibold'>Log In</a></span></p></Link>
+              <button type='submit' className='w-[270px] shadow-md shadow-[#181010de] py-1.5 rounded-3xl mt-6 cursor-pointer bg-[brown] text-[white]'>CREATE ACCOUNT</button>
+              <p>Already have an account?<span><Link to={"/login"} className='text-[#04049f] font-semibold'>Log In</Link></span></p>
 
             </form>
 
