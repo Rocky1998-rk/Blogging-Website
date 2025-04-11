@@ -21,8 +21,8 @@ const App = () => {
       <Toaster position='top-right'/>
       <BrowserRouter>
       <Routes>
-      <Route path='/dashboard' element={<DashBoard/>}/>
       <Route path='/' element={<Signup/>}/>
+      <Route path='/dashboard' element={<DashBoard/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/home' element={<Home/>} />
       <Route path='/about' element={<About/>} />

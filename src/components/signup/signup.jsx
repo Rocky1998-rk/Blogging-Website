@@ -5,7 +5,7 @@ import { FaUnlockKeyhole } from "react-icons/fa6";
 import {useForm} from "react-hook-form";
 import { FaEyeSlash } from "react-icons/fa6";
 import { FaEye } from "react-icons/fa6";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BiSolidCategory } from "react-icons/bi";
 import axios from "axios";
 import toast from 'react-hot-toast';
@@ -129,8 +129,8 @@ const signup = () => {
              <p role="alert" className='w-[340px] h-[30px] text-[red]'>Category is required</p>
              )}
         
-              <a href='/mailNotVerified'><button type='submit' className='w-[270px] shadow-md shadow-[#181010de] py-1.5 rounded-3xl mt-6 cursor-pointer bg-[brown] text-[white]'>CREATE ACCOUNT</button></a>
-              <p>Already have an account? <span><a href='/login' className='text-[#04049f] font-semibold'>Log In</a></span></p>
+              <Link to = {'/mailNotVerified'}><button type='submit' className='w-[270px] shadow-md shadow-[#181010de] py-1.5 rounded-3xl mt-6 cursor-pointer bg-[brown] text-[white]'>CREATE ACCOUNT</button></Link>
+              <Link to={'/login'}><p>Already have an account?<span><a href='' className='text-[#04049f] font-semibold'>Log In</a></span></p></Link>
 
             </form>
 
