@@ -148,7 +148,7 @@ console.log("dashBoard:", user)
         </div>
 
         <div className='flex items-center gap-2 bg-[#61bb61f9] pl-2 rounded-sm py-1.5 shadow-xl shadow-[#3131319c] hover:bg-[skyblue]'>
-          <IoIosCreate className='text-2xl'/><a href='/createBlog' className='w-[100%]  text-[white] hover:text-black'>Create Blog</a>
+          <IoIosCreate className='text-2xl'/><Link to={'/createBlog'} className='w-[100%]  text-[white] hover:text-black'>Create Blog</Link>
         </div>
 
         <div className='flex items-center gap-2 bg-[#61bb61f9] pl-2 py-1.5 rounded-sm shadow-xl shadow-[#051728] hover:bg-[skyblue]' onClick={handleDropBlog}>
