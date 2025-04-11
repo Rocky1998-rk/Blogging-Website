@@ -34,7 +34,6 @@ const signup = () => {
 
  const formSubmit = async () => {
   
-
   try {
       await axios.post("https://blogserver-6h8s.onrender.com/api/signup", formData)
       toast.success("SignUp Successfully")
