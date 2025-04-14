@@ -244,7 +244,7 @@ console.log("dashBoard:", user)
             <div className='w-[100%]  flex items-center gap-3 '>
 
              <div className='w-[118px] h-[118px] p-0.5 rounded-[50%] bg-[blue]'>
-              <img src={user.profilePic} alt=""  className='rounded-[50%]'/>
+              <img src={user.profilePic} alt=""  className='rounded-[50%] object-cover'/>
            </div>
 
              <div>
